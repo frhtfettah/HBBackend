@@ -8,7 +8,16 @@ import io.restassured.specification.RequestSpecification;
 import static constants.constants.baseUri;
 
 public class RestOperation {
-
+    /**
+     *
+     * @brief This method will send a GET request to the specified API path and
+     *        return the response code & response body.
+     * @param url
+     *        Path after the Base URL
+     * @return
+     *        Will return an array. 0th parameter of the array will be the response code.
+     *        1st parameter of the array will be the response body.
+     */
     public static String[] sendGetRequest(String url){
 
         RestAssured.baseURI = baseUri;
