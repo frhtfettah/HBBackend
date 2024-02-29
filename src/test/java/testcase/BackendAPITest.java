@@ -21,6 +21,8 @@ public class BackendAPITest {
     public void checkResponseBody() {
         String[] response = RestOperation.sendGetRequest(path);
 
+        Boolean isEmpty = response[1].toString().isBlank();
+        Assert.assertEquals(isEmpty, false);
         String firstLine = JsonOperation.jsonParse(response[1], "slideshow.slides[1].items[0]");
         Assert.assertEquals(firstLine, apiResponseCheckFirst);
         String secondLine = JsonOperation.jsonParse(response[1], "slideshow.slides[1].items[1]");
