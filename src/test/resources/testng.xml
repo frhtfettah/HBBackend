@@ -3,7 +3,7 @@
 <suite name="restAssured-gradleTestSuite">
     <test thread-count="1" name="Demo">
         <classes>
-            <class name="com.example.BackendAPITest"/> <!-- test case class-->
+            <class name="test.BackendAPITest"/> <!-- test case class-->
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
